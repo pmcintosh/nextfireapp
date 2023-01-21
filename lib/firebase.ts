@@ -195,7 +195,7 @@ export function firestorePostToType(doc: DocumentData): Post {
     title: data?.title,
     content: data?.content,
     createdAt: data?.createdAt?.toMillis() || 0,
-    heartCount: data?.heartCount,
+    heartCount: data?.heartCount ?? 0,
     published: data?.published,
     slug: data?.slug,
     uid: data?.uid,
