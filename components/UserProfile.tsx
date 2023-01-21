@@ -7,7 +7,11 @@ interface Props {
 export default function UserProfile({ user }: Props) {
   return (
     <div className="box-center">
-      <img src={user.photoURL} alt="profile pic" className="card-img-center" />
+      <img
+        src={user.photoURL ?? ""}
+        alt="profile pic"
+        className="card-img-center"
+      />
       <p>
         <i>@{user.username}</i>
       </p>
