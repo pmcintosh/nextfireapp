@@ -194,12 +194,12 @@ export function firestorePostToType(doc: DocumentData): Post {
   return {
     title: data?.title,
     content: data?.content,
-    createdAt: data?.createdAt.toMillis() || 0,
+    createdAt: data?.createdAt?.toMillis() || 0,
     heartCount: data?.heartCount,
     published: data?.published,
     slug: data?.slug,
     uid: data?.uid,
-    updatedAt: data?.updatedAt.toMillis() || 0,
+    updatedAt: data?.updatedAt?.toMillis() || 0,
     username: data?.username,
   };
 }

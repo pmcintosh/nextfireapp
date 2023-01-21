@@ -16,11 +16,13 @@ function PostItem({ post, admin }: PostItemProps) {
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
   return (
     <div className="card">
-      <Link href={`/${post.username}`}>
+      <Link href={admin ? `/admin` : `/${post.username}`}>
         <strong>By @{post.username}</strong>
       </Link>
 
-      <Link href={`/${post.username}/${post.slug}`}>
+      <Link
+        href={admin ? `/admin/${post.slug}` : `/${post.username}/${post.slug}`}
+      >
         <h2>{post.title}</h2>
       </Link>
 
